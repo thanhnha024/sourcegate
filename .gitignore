@@ -1,0 +1,6 @@
+node_modules
+src/wp-content/uploads
+src/wp-content/plugins
+./package-lock.json
+# src/wp-content/plugins
+# npx tailwindcss -i ./tailwind.css -o ./style.css --watch

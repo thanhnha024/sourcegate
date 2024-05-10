@@ -1,0 +1,10 @@
+.woocommerce .wdt_img div.images{
+  width: 100% !important;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs {
+   margin-top: 20px;
+}
+.woocommerce div.product div.images .flex-control-thumbs li{
+    padding-right: 15px;
+}
