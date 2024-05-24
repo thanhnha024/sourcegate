@@ -7,3 +7,39 @@
 @import "buttons";
 
 @import "custom";
+
+
+.prd_list{
+    .prd_price{
+        display: inline-block;
+        width: 35%;
+        height: 37px;
+        border: 2px solid #5db5ff;
+        border-radius: 5px 0 0 5px;
+    }
+    a.view-all.shop_add_cart{
+        width: 65%;
+        margin-top: 0px;
+        border-radius: 0 5px 5px 0;
+    }
+    .readmore-zippy{
+        width: 100% !important;
+        border-radius: 5px !important;
+    }
+}
+h5.fnt_dark_color_c1{
+    margin-bottom: 15px;
+}
+.prd_price {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    span{
+        
+        bdi{
+            font-size: 23px;
+            display: block;
+            height: 100%;
+        }
+    }
+}

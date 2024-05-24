@@ -64,9 +64,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	</div>
                 <?php endif; ?>
             </div>
-    <span class="prd_price"><?php echo $product->get_price_html(); ?></span>
+
     <?php
+	if ( $product->get_price() ) {
+		echo '<span class="prd_price">'.  $product->get_price_html() . '</span>';
 		echo apply_filters( 'woocommerce_loop_add_to_cart_link',
+		
 		sprintf( '<a href="%s" title="Add to Cart" rel="nofollow" data-product_id="%s" data-product_sku="%s" class="view-all hvr-bounce-to-right shop_add_cart %s product_type_%s">Add to cart</a>',
 		    esc_url( $product->add_to_cart_url() ),
 		    esc_attr( $product->id ),
@@ -76,5 +79,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		    esc_html( $product->add_to_cart_text() )
 		),
 		$product );
+	}
+	else{
+		echo '<a href="' . get_permalink( $product->get_id() ) . '" title="Read More" class="view-all hvr-bounce-to-right shop_add_cart add_to_cart_button product_type_simple readmore-zippy">Read More</a>';
+	}
+		
+
+		
 		 ?>
 </div>
